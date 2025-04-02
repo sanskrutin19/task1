@@ -36,7 +36,7 @@ body {
     width: 100%;
 }
 
-#taskCategories li {
+.category {
     padding: 10px;
     border-radius: 6px;
     background: #FFC6FF;
@@ -46,8 +46,13 @@ body {
     transition: background 0.3s;
 }
 
-#taskCategories li:hover {
+.category:hover {
     background: #FFB6B9;
+}
+
+.category.active {
+    background: #FFB6B9;
+    font-weight: bold;
 }
 
 /* Sticky Note */
@@ -121,7 +126,7 @@ body {
     cursor: pointer;
 }
 
-.task-item.completed {
+.task-item.completed .task-text {
     text-decoration: line-through;
     color: gray;
     background: #D3D3D3;
